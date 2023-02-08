@@ -37,6 +37,11 @@ return require('packer').startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
 
+  use({
+    "akinsho/toggleterm.nvim",
+    config = [[require('antnzr.toggleterm')]],
+  })
+
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v1.x',

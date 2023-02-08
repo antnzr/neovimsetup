@@ -181,6 +181,12 @@ _G.packer_plugins = {
     path = "/home/nazar/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["toggleterm.nvim"] = {
+    config = { "require('antnzr.toggleterm')" },
+    loaded = true,
+    path = "/home/nazar/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
+  },
   undotree = {
     loaded = true,
     path = "/home/nazar/.local/share/nvim/site/pack/packer/start/undotree",
@@ -198,6 +204,10 @@ time([[Defining packer_plugins]], false)
 time([[Config for dracula]], true)
 try_loadstring("\27LJ\2\nZ\0\0\3\0\5\0\b6\0\0\0'\2\1\0B\0\2\0016\0\2\0009\0\3\0'\2\4\0B\0\2\1K\0\1\0\24colorscheme dracula\bcmd\bvim\19antnzr.dracula\frequire\0", "config", "dracula")
 time([[Config for dracula]], false)
+-- Config for: toggleterm.nvim
+time([[Config for toggleterm.nvim]], true)
+require('antnzr.toggleterm')
+time([[Config for toggleterm.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
