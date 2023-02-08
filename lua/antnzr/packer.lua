@@ -38,8 +38,13 @@ return require('packer').startup(function(use)
   }
 
   use({
-    "akinsho/toggleterm.nvim",
+    'akinsho/toggleterm.nvim',
     config = [[require('antnzr.toggleterm')]],
+  })
+
+  use({
+    'windwp/nvim-autopairs',
+    config = function() require("nvim-autopairs").setup {} end
   })
 
   use {
