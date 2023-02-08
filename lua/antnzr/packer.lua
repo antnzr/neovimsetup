@@ -4,22 +4,20 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-  -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.1',
-	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
   use({
-	  'rose-pine/neovim',
-	  as = 'rose-pine',
-	  config = function()
-		  require("rose-pine").setup()
-		  vim.cmd('colorscheme rose-pine')
-	  end
+    'Mofiqul/dracula.nvim',
+    as = 'dracula',
+    config = function()
+      require("antnzr.dracula")
+      vim.cmd('colorscheme dracula')
+    end
   })
 
   use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
@@ -34,7 +32,6 @@ return require('packer').startup(function(use)
 
   use('tpope/vim-fugitive')
 
-  --  use('vim-airline/vim-airline')
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }

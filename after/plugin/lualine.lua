@@ -1,4 +1,4 @@
 require('lualine').setup {
-  options = { theme = 'everforest' }
+  options = { theme = 'dracula-nvim' }
 }
 
