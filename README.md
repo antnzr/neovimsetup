@@ -1,5 +1,3 @@
-# Neovim
-
-# all the credits to [ThePrimeagen](https://github.com/ThePrimeagen/init.lua)
-# `ripgrep` need to be installed [link](https://github.com/BurntSushi/ripgrep)
+## Neovim setup
+* [ripgrep](https://github.com/BurntSushi/ripgrep) need to be installed
 

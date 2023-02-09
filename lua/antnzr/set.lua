@@ -33,3 +33,7 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "100"
 
+vim.g.netrw_banner = 0
+vim.g.netrw_liststyle = 3
+vim.g.netrw_winsize = 30
+
