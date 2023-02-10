@@ -25,9 +25,29 @@ return require('packer').startup(function(use)
     end
   })
 
-  use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+  use('MunifTanjim/nui.nvim')
 
   use('nvim-lua/plenary.nvim')
+
+  use('nvim-tree/nvim-web-devicons')
+
+  use {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v2.x",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+    },
+    config = function ()
+      vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
+      require('antnzr.neotree')
+      vim.cmd([[nnoremap \ :Neotree reveal<cr>]])
+    end
+  }
+
+  use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+
 
   use('ThePrimeagen/harpoon')
 
