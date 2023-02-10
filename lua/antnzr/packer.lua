@@ -76,6 +76,15 @@ return require('packer').startup(function(use)
   })
 
   use {
+    'glepnir/dashboard-nvim',
+    event = 'VimEnter',
+    config = function()
+      require('dashboard').setup {}
+    end,
+    requires = {'nvim-tree/nvim-web-devicons'}
+  }
+
+  use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v1.x',
 	  requires = {
